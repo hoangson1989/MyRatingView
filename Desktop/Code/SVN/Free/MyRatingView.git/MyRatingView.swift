@@ -22,14 +22,14 @@ class MyRatingView: UIView {
         //self.backgroundColor = UIColor.clearColor()
         currentValue = rate
         self.maxRate = maxRate
-        let h = self.frameSizeHeight()
+        let h = self.frame.size.height
         var xBegin : CGFloat = 0
         if align == RATE_ALIGNMENT.CENTER {
-            xBegin = self.frameSizeWidth()/2
+            xBegin = self.frame.size.width/2
             xBegin -= (h * CGFloat(maxRate))/2
             xBegin -= (space * (CGFloat(maxRate-1)))/2
         }else if align == RATE_ALIGNMENT.RIGHT {
-            xBegin = (self.frameSizeWidth() - h * CGFloat(maxRate) -  space * CGFloat(maxRate-1))
+            xBegin = (self.frame.size.width) - h * CGFloat(maxRate) -  space * CGFloat(maxRate-1))
         }
         
 //        for view in self.subviews {
